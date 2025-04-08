@@ -2,15 +2,14 @@
 using namespace std;
 
 void selection(int arr[],int n){
-    for(int i = 0; i < n - 2; i++){
-        int mini = i;
-        for(int j = i; j < n; j++){
-            if(arr[j] < arr[i]){
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+    for(int i = 0; i < n - 1; i++){
+        int mini_ind = i;
+        for(int j = i + 1; j < n; j++){
+            if(arr[j] < arr[mini_ind]){
+                mini_ind = j ;
             }
         }
+        swap(arr[mini_ind],arr[i]);
     }
 }
 
@@ -25,11 +24,13 @@ int main(){
     for(int i = 0; i < n; i++){
         cin >> arr[i];
     }
+    
+    int size = sizeof(arr)/sizeof(arr[0]);
 
-    selection(arr, n);
+    selection(arr, size);
 
         for(int i = 0; i < n; i++){
-cout << arr[i];
+cout << arr[i] << " ";
     }
 
 
