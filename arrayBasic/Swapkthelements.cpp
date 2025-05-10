@@ -8,8 +8,8 @@ int main(){
     int start_idx = k - 1;
     int end_inx = n - k;
     swap(arr[start_idx],arr[end_inx]);
-    // for(int i = 0; i <= n; i++){
-    //     cout << arr[i] << endl;
-    // }
-cout << arr[start_idx] << " "  << arr[end_inx];
+    for(int i = 0; i <= n - 1; i++){
+        cout << i << " = " << arr[i] << endl;
+    }
+// cout << arr[start_idx] << " "  << arr[end_inx];
 }
