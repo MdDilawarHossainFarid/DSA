@@ -11,5 +11,5 @@ int main(){
     for(int i = 0; i <= n - 1; i++){
         cout << i << " = " << arr[i] << endl;
     }
-// cout << arr[start_idx] << " "  << arr[end_inx];
+cout << arr[start_idx] << " "  << arr[end_inx];
 }
